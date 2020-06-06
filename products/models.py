@@ -19,3 +19,12 @@ class Product(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class Cart(models.Model):
+    user = models.ForeignKey(User)
+    order_item = models.ForeignKey(title, on_delete = models.CASCADE)
+    active = models.BooleanField(default=True)
+    order_date = models.DateField(null=True)
+    payment_type = models.CharField(max_length=100, null=True)
+    payment_id = models.CharField(max_length=100, null=True)

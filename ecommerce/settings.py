@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'products',
+    'accounts',
 ]
 
 MIDDLEWARE = [
@@ -55,7 +56,7 @@ ROOT_URLCONF = 'ecommerce.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['ecommerce/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -120,7 +121,7 @@ USE_TZ = True
 
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'producthunt/static/')
+    os.path.join(BASE_DIR, 'ecommerce/static/')
 ]
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
